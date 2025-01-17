@@ -1,0 +1,197 @@
+/* Importing the Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box; /* Ensures consistent box model for all elements */
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* Applying the Roboto font */
+  background-color: #121212; /* Dark background for dark mode */
+  color: #e0e0e0; /* Lighter text color for better contrast */
+}
+
+h1 {
+  color: #ffffff; /* White color for headings */
+  margin-bottom: 20px;
+}
+
+p {
+  color: #b0b0b0; /* Lighter gray for paragraphs */
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  max-width: 100%; /* Ensure table doesn't exceed container width */
+  margin: 20px auto; /* Center table horizontally */
+  border-collapse: collapse;
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #333; /* Darker border color */
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Table Header Background Color */
+th {
+    background-color: #4A90E2; /* Soft, calming blue */
+    color: white;
+    font-weight: 600;
+  }
+  
+
+td {
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+}
+
+tr:nth-child(even) {
+  background-color: #2a2a2a; /* Slightly darker background for even rows */
+}
+
+tr:hover {
+  background-color: #333; /* Soft hover effect on rows */
+}
+
+/* Soft rounded corners for input fields */
+input {
+  padding: 12px;
+  border: 1px solid #555; /* Darker border for input */
+  border-radius: 6px; /* Rounded corners for the input fields */
+  width: 100%;
+  max-width: 130px;
+  text-align: center;
+  background-color: #333; /* Dark background for the input fields */
+  color: #e0e0e0; /* Lighter text color for inputs */
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #007aff; /* Blue focus color */
+  background-color: #444; /* Darker background on focus */
+}
+
+/* Button Styling */
+button {
+  background-color: #007aff; /* Apple-like blue */
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px; /* Rounded corners for the button */
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 250px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0051b3; /* Darker blue on hover */
+}
+
+button:active {
+  background-color: #003e8c; /* Even darker blue on click */
+}
+
+/* SGPA Result Styling */
+.sgpa-result {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #e0e0e0; /* Lighter color for the SGPA result */
+}
+
+/* Action Container */
+.action-container {
+  margin-top: 30px;
+}
+
+/* Toast Notifications */
+.Toastify__toast--error {
+  background-color: #dc3545;
+}
+
+.Toastify__toast--success {
+  background-color: #28a745;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (phones, less than 768px) */
+@media only screen and (max-width: 768px) {
+  table {
+    width: 100%;
+    margin: 0 auto; /* Ensure table stays centered */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+
+  th, td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 14px;
+    max-width: 100px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+    max-width: 200px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .sgpa-result {
+    font-size: 20px;
+  }
+}
+
+/* Extra small devices (phones like iPhone SE, less than 480px) */
+@media only screen and (max-width: 480px) {
+  table {
+    width: 100%;
+    overflow-x: auto;
+    margin: 0 auto; /* Ensure table stays centered */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  input {
+    padding: 8px;
+    font-size: 12px;
+    max-width: 80px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 12px;
+    max-width: 180px;
+  }
+
+  .container {
+    padding: 5px;
+  }
+
+  .sgpa-result {
+    font-size: 18px;
+  }
+}
+
