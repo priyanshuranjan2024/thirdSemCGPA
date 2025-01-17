@@ -41,18 +41,42 @@ const Table = () => {
   const calculateSGPA = () => {
     let totalWeightedScore = 0;
     let totalCredits = 0;
-
+  
     subjects.forEach((subject, index) => {
       const totalMarks = marks[index].total;
-      const gradePoint = (totalMarks / 100) * 10; // Adjusted for total marks out of 100
+      
+      // Adjust grade point based on totalMarks
+      let gradePoint = 0;
+      if (totalMarks >= 90) {
+        gradePoint = 10;
+      } else if (totalMarks >= 80) {
+        gradePoint = 9;
+      } else if (totalMarks >= 70) {
+        gradePoint = 8;
+      } else if (totalMarks >= 60) {
+        gradePoint = 7;
+      } else if (totalMarks >= 50) {
+        gradePoint = 6;
+      } else if (totalMarks >= 40) {
+        gradePoint = 5;
+      } else {
+        gradePoint = 0; // Assuming fail grades get 0
+      }
+  
+      // Logging for debugging
+      console.log(`Subject: ${subject.name}, Marks: ${totalMarks}, Grade Point: ${gradePoint}, Credits: ${subject.credits}`);
+  
+      // Calculate total weighted score and total credits
       totalWeightedScore += gradePoint * subject.credits;
       totalCredits += subject.credits;
     });
-
+  
+    // Calculate SGPA and set it
     const sgpa = totalWeightedScore / totalCredits;
+    console.log(`Total Weighted Score: ${totalWeightedScore}, Total Credits: ${totalCredits}`);
     setSgpa(sgpa.toFixed(2));
   };
-
+  
   return (
     <div className="container">
       <table className="responsive-table">
